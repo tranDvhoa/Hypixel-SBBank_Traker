@@ -16,3 +16,9 @@ This tool is strictly for my own account and does not track other players or de-
 
 ## Security 
 I use a json file to store my API key; it's never hard-coded.
+
+## NOs
+No sharing API
+No automatic game-interaction or macro
+No other players tracking
+No continuous polling (requests every 15 minutes)
