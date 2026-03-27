@@ -18,7 +18,7 @@ url = f"https://api.hypixel.net/v2/skyblock/profiles?key={API_KEY}&uuid={uuid}"
 
 data = getInfo(url)
 
-conn = sqlite3.connect(r'C:\Users\Hoa\OneDrive\Desktop\code\bankmanager.db')
+conn = sqlite3.connect('bankmanager.db')
 conn.cursor().execute("""CREATE TABLE IF NOT EXISTS bankmanager
                          (
                              id             INTEGER PRIMARY KEY AUTOINCREMENT,
