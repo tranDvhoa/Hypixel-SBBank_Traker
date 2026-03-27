@@ -13,7 +13,7 @@ def getInfo(call):
 with open('config.json', 'r') as f:
     config = json.load(f)
 
-uuid = ""
+uuid = config['uuid']
 API_KEY = config['api_key']
 
 url = f"https://api.hypixel.net/v2/skyblock/profiles?key={API_KEY}&uuid={uuid}"
