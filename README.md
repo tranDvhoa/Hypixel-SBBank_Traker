@@ -15,4 +15,4 @@ A Python tool to track personal bank history.
 This tool is strictly for my own account and does not track other players or de-anonymize anyone.
 
 ## Security 
-I use environment json to store my API key; it's never hard-coded."
+I use a json file to store my API key; it's never hard-coded."
