@@ -9,3 +9,4 @@ A Python tool to track personal bank history.
 ## Files
 - `banktracker2.py`: Main script.
 - `bankmanager.db`: Sample database showing successful data collection.
+- `bankmanager.csv`: Contains a snapshot of the data collected by this bot. 
