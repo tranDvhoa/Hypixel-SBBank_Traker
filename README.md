@@ -2,7 +2,7 @@
 A Python tool to track personal bank history.
 
 ## Features
-- Fetches data from Hypixel API every 5 minutes.
+- Fetches data from Hypixel API every 15 minutes.
 - Stores transactions in a local SQLite database.
 - Visualizes balance trends by using DataGrip's built-in graph features
 
