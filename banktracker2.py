@@ -4,21 +4,23 @@ import sqlite3
 from pprint import pprint
 from datetime import datetime
 import pytz
-
+import json
 
 def getInfo(call):
     r = requests.get(call)
     return r.json()
 
+with open('config.json', 'r') as f:
+    config = json.load(f)
 
 uuid = ""
-API_KEY = ""
+API_KEY = config['api_key']
 
 url = f"https://api.hypixel.net/v2/skyblock/profiles?key={API_KEY}&uuid={uuid}"
 
 data = getInfo(url)
 
-conn = sqlite3.connect('bankmanager.db')
+conn = sqlite3.connect(r'C:\Users\Hoa\OneDrive\Desktop\code\bankmanager.db')
 conn.cursor().execute("""CREATE TABLE IF NOT EXISTS bankmanager
                          (
                              id             INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -48,9 +50,9 @@ for i in range(0, all_transactions):
     balance = detailed_balance
     balance_history.append(detailed_balance)
     if transaction['action'] == "DEPOSIT":
-        detailed_balance = balance - round(transactions[all_transactions - 1 - i]['amount'])
+        detailed_balance = balance - round(transaction['amount'])
     else:
-        detailed_balance = balance + round(transactions[all_transactions - 1 - i]['amount'])
+        detailed_balance = balance + round(transaction['amount'])
 balance_history = list(reversed(balance_history))
 
 for i in range(0, all_transactions):
