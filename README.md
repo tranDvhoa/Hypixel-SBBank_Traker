@@ -10,3 +10,9 @@ A Python tool to track personal bank history.
 - `banktracker2.py`: Main script.
 - `bankmanager.db`: Sample database showing successful data collection.
 - `bankmanager.csv`: Contains a snapshot of the data collected by this bot. 
+
+## Privacy
+This tool is strictly for my own account and does not track other players or de-anonymize anyone.
+
+## Security 
+I use environment json to store my API key; it's never hard-coded."
